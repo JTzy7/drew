@@ -8215,6 +8215,40 @@ h1, h2, h3, h4, h5,
 .text-primary {
   color: #b1b493 !important; }
 
+/* Default black logo for web view */
+.logo-default {
+    width: 70px;
+    height: auto;
+    display: block;
+}
+
+/* Hidden white logo for mobile until triggered */
+.logo-mobile {
+    width: 70px;
+    height: auto;
+    display: none;
+}
+
+/* Mobile view: navbar turns black; show white logo */
+@media (max-width: 991.98px) {
+    .logo-default {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: block;
+    }
+}
+
+/* On scroll for all devices — keep black logo visible */
+.ftco-navbar-light.scrolled .logo-default {
+    display: block;
+}
+
+.ftco-navbar-light.scrolled .logo-mobile {
+    display: none;
+}
+
 .ftco-navbar-light {
   background: transparent !important;
   position: absolute;
